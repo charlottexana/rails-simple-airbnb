@@ -1,0 +1,23 @@
+<h1>Flats for Rent</h1>
+
+
+  <ul>
+    <div class="d-flex justify-content-between p-2">
+<% @flats.each do |flat| %>
+  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= flat.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= flat.address  %></h6>
+
+    <div class="d-flex justify-content-between" ><p class="card-text"><%= flat.price_per_night  %></p>
+      <p class="card-text"><%= flat.number_of_guests  %></p>
+    </div>
+  </div>
+
+  <div style="background-color: grey">
+    <a href="#" class="card-link"><%= link_to "More info", flat_path(flat)  %></a>
+  </div>
+</div>
+<% end %>
+</ul>
+</div>
